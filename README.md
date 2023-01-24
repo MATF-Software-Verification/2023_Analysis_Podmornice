@@ -8,10 +8,10 @@ Projekat je nastao u okviru kursa Programske paradigme a tvorci su Sara Mišić 
 Primena alata će biti izvršena na main grani, nad komitom čiji je
 hash code sledeći: ec528ce43af9de94bf2fab308ce2d6270584881c.
 
-#Alati koji su korišćeni za verifikaciju:
+# Alati koji su korišćeni za verifikaciju:
 1.GCov
 2.
 3.
 4.
 
-#Zaključci koji su doneti i bagovi koji su otkriveni:
+# Zaključci koji su doneti i bagovi koji su otkriveni:
