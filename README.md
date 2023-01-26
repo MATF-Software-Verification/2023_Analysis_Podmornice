@@ -13,7 +13,7 @@ Dataljan postupak i opis analize projekta dat je u ProjectAnalysisReport.pdf.
 1.Valgrind alat Memcheck \
 2.Valgrind alat Callgrind \
 3.GCOV  \
-4.UnitTest  \
+4.UnitTest  
 
 # Zaključci koji su doneti i bagovi koji su otkriveni:
 Najveći udeo u izvršavanju imaju funkcije za pravljenje gui-a. Mali je udeo funkcija koje su direktno implementirane u kodu koji analiziramo.  \
