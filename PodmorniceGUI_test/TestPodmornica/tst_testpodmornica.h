@@ -2,7 +2,7 @@
 #define TST_TESTPODMORNICA_H
 
 #include <QTest>
-#include"../kreniigru.h"
+#include"../../2021_Podmornice/podmorniceGUI_Novo/PodmorniceGUI/kreniigru.h"
 
 class TestPodmornica : public QObject
 {

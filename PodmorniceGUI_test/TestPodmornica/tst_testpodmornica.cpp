@@ -1,7 +1,7 @@
 #include <QtTest>
 #include<QVector>
 #include"tst_testpodmornica.h"
-#include"../kreniigru.h"
+#include"../../2021_Podmornice/podmorniceGUI_Novo/PodmorniceGUI/kreniigru.h"
 
 // add necessary includes here
 

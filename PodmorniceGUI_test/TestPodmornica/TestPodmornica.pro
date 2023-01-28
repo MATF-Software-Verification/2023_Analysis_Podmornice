@@ -12,17 +12,17 @@ QMAKE_CXXFLAGS += -g -Wall --coverage -O0
 QMAKE_LFLAGS += -g -Wall --coverage -O0
 
 SOURCES +=  tst_testpodmornica.cpp \
-    ../gubitak.cpp \
-    ../kreniigru.cpp \
-    ../pobeda.cpp \
-    ../podmornicegui.cpp \
+    ../../2021_Podmornice/podmorniceGUI_Novo/PodmorniceGUI/gubitak.cpp \
+    ../../2021_Podmornice/podmorniceGUI_Novo/PodmorniceGUI/kreniigru.cpp \
+    ../../2021_Podmornice/podmorniceGUI_Novo/PodmorniceGUI/pobeda.cpp \
+    ../../2021_Podmornice/podmorniceGUI_Novo/PodmorniceGUI/podmornicegui.cpp \
     main.cpp
 
 HEADERS += \
-    ../gubitak.h \
-    ../kreniigru.h \
-    ../pobeda.h \
-    ../podmornicegui.h \
-    ../ui_kreniigru.h \
-    ../ui_podmornicegui.h \
+    ../../2021_Podmornice/podmorniceGUI_Novo/PodmorniceGUI/gubitak.h \
+    ../../2021_Podmornice/podmorniceGUI_Novo/PodmorniceGUI/kreniigru.h \
+    ../../2021_Podmornice/podmorniceGUI_Novo/PodmorniceGUI/pobeda.h \
+    ../../2021_Podmornice/podmorniceGUI_Novo/PodmorniceGUI/podmornicegui.h \
+    ../../2021_Podmornice/podmorniceGUI_Novo/PodmorniceGUI/ui_kreniigru.h \
+    ../../2021_Podmornice/podmorniceGUI_Novo/PodmorniceGUI/ui_podmornicegui.h \
     tst_testpodmornica.h
