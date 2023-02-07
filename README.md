@@ -21,3 +21,6 @@ Dataljan postupak i opis analize projekta dat je u ProjectAnalysisReport.pdf.
 Najveći udeo u izvršavanju imaju funkcije za pravljenje gui-a. Mali je udeo funkcija koje su direktno implementirane u kodu koji analiziramo.  \
 Testiranje koje je rađeno na odredjenim funkcijama je uspešno. Odnosno svi testovi prolaze.  \
 Najveći problem koji je nađen u kodu jeste curenje memorije. Dataljan izveštaj o curenju memorije je dobijen kao izlaz Memcheck-a.
+
+# Autor
+Milica Kleut 1025/2022 
