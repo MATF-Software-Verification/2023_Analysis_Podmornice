@@ -2,3 +2,6 @@
 	path = 2021_Podmornice
 	url = https://github.com/matf-pp/2021_Podmornice
 	ignore = all
+[submodule "Podmornice"]
+	path = Podmornice
+	url = https://github.com/kleut98/Podmornice
