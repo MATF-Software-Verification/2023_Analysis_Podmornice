@@ -2,7 +2,7 @@
 #define TST_TESTPODMORNICA_H
 
 #include <QTest>
-#include"../../2021_Podmornice/podmorniceGUI_Novo/PodmorniceGUI/kreniigru.h"
+#include"../../Podmornice/podmorniceGUI_Novo/PodmorniceGUI/kreniigru.h"
 
 class TestPodmornica : public QObject
 {
@@ -22,9 +22,14 @@ private slots:
     void test_izaberiVrsteKolone();
     void test_izmeniPodmornicu();
     void test_izmeniTablu();
+    void test_postaviPodmornicu();
+    void test_igraj();
 private:
     Podmornica *a,*b;
     int matr[10][10];
+    int potopljenePodmornice;
+    int pokusaji;
+    QVector<Podmornica> listaPodmornica;
 
 };
 

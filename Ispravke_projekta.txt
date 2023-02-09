@@ -1,0 +1,8 @@
+* napravljen je novi, dodatni submodul u kome je izvorni kod igrice menjan tako da se prilagodi analizi i testiranju koda:
+	*dodati su makroi kojim se zaobilaze Qt funkcije
+	*dodati su makroi koji maskriraju random funkcije (za potrebe testiranja, jer glavna logika igrice koristi random)
+* dodati su novi testovi koji testiraju funkcije koje pre uvedenih izmena nisu mogle biti testirane
+* pdf je izmenjen u skladu sa novim izgledom projekta
+* u pdf-u je izmedjeno koriscenje koda u tekstu prema pravilima latex-a za pisanje linije i bloka koda
+* napravljen je skript za testiranje + pokrivenost kako ne bi morali da kucamo niz komandi u terminalu
+* korisceni su isti alati kao i pre samo na izmenjeni (prilagodjeni) projekat - tako da su i Memcheck i Callgrind opet pokrenuti na izmenjenom projektu

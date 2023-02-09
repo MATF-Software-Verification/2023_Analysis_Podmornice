@@ -1,7 +1,8 @@
 #include <QtTest>
 #include<QVector>
+#include<iostream>
 #include"tst_testpodmornica.h"
-#include"../../2021_Podmornice/podmorniceGUI_Novo/PodmorniceGUI/kreniigru.h"
+#include"../../Podmornice/podmorniceGUI_Novo/PodmorniceGUI/kreniigru.h"
 
 // add necessary includes here
 
@@ -20,6 +21,9 @@ TestPodmornica::~TestPodmornica()
 
 void TestPodmornica::init()
 {
+
+       potopljenePodmornice=0;
+       pokusaji=0;
 
     for(int i=0;i<10;i++)
         for(int j=0;j<10;j++)
@@ -278,6 +282,130 @@ void TestPodmornica::test_izmeniTablu()
                 noviBrojac+=matr[i][j];
 
     QCOMPARE(noviBrojac,brojac+25+16+1+1);
+}
+
+void TestPodmornica::test_postaviPodmornicu()
+{
+    int brojac=0;
+
+    for(int i=0;i<10;i++)
+        for(int j=0;j<10;j++)
+            if(matr[i][j]!=0)
+                brojac+=matr[i][j];
+
+    //listaPodmornica.clear();
+    bool ret1=postaviPodmornicu(matr,1,1,listaPodmornica);
+    bool ret2=postaviPodmornicu(matr,2,2,listaPodmornica);
+
+    QVERIFY(ret1==true);
+    QVERIFY(ret2==true);
+
+    int brojacNovi=0;
+
+    for(int i=0;i<10;i++)
+        for(int j=0;j<10;j++)
+            if(matr[i][j]!=0)
+                brojacNovi+=matr[i][j];
+
+    QCOMPARE(brojacNovi,brojac+5);
+}
+
+void TestPodmornica::test_igraj()
+{
+
+
+    QVector<int> koordinate_vrste_jedan (1);
+    QVector<int> koordinate_kolone_jedan (1);
+
+    //kako pravimo proizvoljnu pomornicu, unecemo rucno
+    //koordite
+    koordinate_vrste_jedan[0]=0;
+
+    koordinate_kolone_jedan[0]=0;
+
+
+        matr[0][0]=1;
+
+
+    Podmornica *jedan=new Podmornica('h',1,koordinate_vrste_jedan,koordinate_kolone_jedan,0,"Podmornica duzine 1");
+
+    QVector<int> koordinate_vrste_dva (2);
+    QVector<int> koordinate_kolone_dva (2);
+
+    //kako pravimo proizvoljnu pomornicu, unecemo rucno
+    //koordite
+    koordinate_vrste_dva[0]=0;
+    koordinate_vrste_dva[1]=0;
+
+    koordinate_kolone_dva[0]=6;
+    koordinate_kolone_dva[1]=7;
+
+
+    for(int j=6;j<8;j++){
+        matr[0][j]=2;
+    }
+
+    Podmornica *dva=new Podmornica('h',2,koordinate_vrste_dva,koordinate_kolone_dva,0,"Podmornica duzine 2");
+
+    QVector<int> koordinate_vrste_cetiri (4);
+    QVector<int> koordinate_kolone_cetiri (4);
+
+    //kako pravimo proizvoljnu pomornicu, unecemo rucno
+    //koordite
+    koordinate_vrste_cetiri[0]=5;
+    koordinate_vrste_cetiri[1]=5;
+    koordinate_vrste_cetiri[2]=5;
+    koordinate_vrste_cetiri[2]=5;
+
+    koordinate_kolone_cetiri[0]=0;
+    koordinate_kolone_cetiri[1]=1;
+    koordinate_kolone_cetiri[2]=2;
+    koordinate_kolone_cetiri[3]=3;
+
+    for(int j=0;j<4;j++){
+        matr[5][j]=4;
+    }
+
+    Podmornica *cetiri=new Podmornica('h',4,koordinate_vrste_cetiri,koordinate_kolone_cetiri,0,"Podmornica duzine 4");
+
+    listaPodmornica.clear();
+    listaPodmornica.push_back(*jedan); //1
+    listaPodmornica.push_back(*dva); //2
+    listaPodmornica.push_back(*a); //3
+    listaPodmornica.push_back(*cetiri); //4
+    listaPodmornica.push_back(*b); //5
+
+    int ret=-1;
+    ret=igraj(5,5,matr,&pokusaji,&potopljenePodmornice,listaPodmornica);
+    QCOMPARE(ret,0);
+
+    ret=igraj(1,0,matr,&pokusaji,&potopljenePodmornice,listaPodmornica);
+    QCOMPARE(ret,0);
+
+    ret=igraj(1,1,matr,&pokusaji,&potopljenePodmornice,listaPodmornica);
+    QCOMPARE(ret,0);
+
+    ret=igraj(1,2,matr,&pokusaji,&potopljenePodmornice,listaPodmornica);
+    QCOMPARE(ret,0);
+
+    ret=igraj(5,0,matr,&pokusaji,&potopljenePodmornice,listaPodmornica);
+    QCOMPARE(ret,0);
+
+    ret=igraj(0,0,matr,&pokusaji,&potopljenePodmornice,listaPodmornica);
+    QCOMPARE(ret,0);
+
+    ret=igraj(0,6,matr,&pokusaji,&potopljenePodmornice,listaPodmornica);
+    QCOMPARE(ret,0);
+
+    ret=igraj(0,3,matr,&pokusaji,&potopljenePodmornice,listaPodmornica);
+    QCOMPARE(ret,0);
+
+    QCOMPARE(pokusaji,8);
+    QCOMPARE(potopljenePodmornice,2);
+
+    delete jedan;
+    delete dva;
+    delete cetiri;
 }
 
 
