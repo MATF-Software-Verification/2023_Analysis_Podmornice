@@ -18,9 +18,8 @@ Dataljan postupak i opis analize projekta dat je u ProjectAnalysisReport.pdf.
 4.UnitTest  
 
 # Zaključci koji su doneti i bagovi koji su otkriveni:
-Najveći udeo u izvršavanju imaju funkcije za pravljenje gui-a. Mali je udeo funkcija koje su direktno implementirane u kodu koji analiziramo.  \
-Testiranje koje je rađeno na odredjenim funkcijama je uspešno. Odnosno svi testovi prolaze.  \
-Najveći problem koji je nađen u kodu jeste curenje memorije. Dataljan izveštaj o curenju memorije je dobijen kao izlaz Memcheck-a.
+Testiranje koje je rađeno na odredjenim funkcijama je uspešno. Odnosno svi testovi prolaze i imaju dobru pokrivenost. Testiraju se sve funkcije koje opisuju logiku igrice.   \
+Nema curenja memorije i funkcije su optimalno implementirane. Može se povećati granularnost koda radi lakšeg testiranja. Nije zgodno za testiranje što su korišćene random funkcije tj. generisani su random brojevi. 
 
 # Autor
 Milica Kleut 1025/2022 
